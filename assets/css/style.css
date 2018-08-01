@@ -223,8 +223,12 @@ input[type=submit] {
 }
 /* Media Queries */
 
-@media only screen and (min-width: 640px) {
+@media only screen and (max-width: 640px) {
   /* For mobile: */
+  #logo, header {
+    width: 100%;
+    position:static;
+  }
   .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -239,7 +243,7 @@ input[type=submit] {
 .col-12 {width: 100%;}
 }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (max-width: 768px) {
     /* For tablet: */
     .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -255,7 +259,7 @@ input[type=submit] {
 .col-12 {width: 100%;}
   }
 
-    @media only screen and (min-width: 960px) {
+    @media only screen and (max-width: 960px) {
       /* For desktop: */
       .col-1 {width: 8.33%;}
       .col-2 {width: 16.66%;}
