@@ -54,10 +54,10 @@ h3 {
 /* header */
 
 #masthead {
-  position: fixed;
+  position: static;
   z-index: 99;
   width: 100%;
-  margin: 0 0 30px;
+  margin: 0 ;
   overflow: auto;
   color: #fff;
   background: #fff;
@@ -66,8 +66,7 @@ h3 {
 
 #logo {
   float: left;
-  width: 250px;
-  height: 90px;
+  width: 100%;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
   font-weight: 700;
@@ -86,7 +85,7 @@ nav {
 nav a {
   display: inline-block;
   padding-left: 15px;
-  margin-left: 15px;
+  margin: 0 auto;
   line-height: 18px;
   color: #999;
   text-decoration: none;
@@ -121,7 +120,7 @@ h3, h2 {
 /* main */
 
 #main-container {
-  padding-top: 130px;
+  
   min-height: calc(100vh - 70px);
 }
 
@@ -223,12 +222,27 @@ input[type=submit] {
 }
 /* Media Queries */
 
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 640px) {
   /* For mobile: */
-  #logo, header {
-    width: 100%;
-    position:static;
+masthead {
+    position: fixed;
   }
+  
+  #logo {
+    width: 250px;
+    height: 90px;
+  }
+  
+  nav a {
+    margin-left: 15px;
+  }
+}
+
+#main-container {
+
+  padding-top: 130px;
+
+}
   .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -243,7 +257,7 @@ input[type=submit] {
 .col-12 {width: 100%;}
 }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) {
     /* For tablet: */
     .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -259,7 +273,7 @@ input[type=submit] {
 .col-12 {width: 100%;}
   }
 
-    @media only screen and (max-width: 960px) {
+    @media only screen and (min-width: 960px) {
       /* For desktop: */
       .col-1 {width: 8.33%;}
       .col-2 {width: 16.66%;}
@@ -274,3 +288,11 @@ input[type=submit] {
       .col-11 {width: 91.66%;}
       .col-12 {width: 100%;}
     }
+
+
+    /* Notes
+    Header links need to be centered and margins 
+Footer needs to be fixed on mobile with no margins
+Contact form needs to be modified for mobile */
+
+
